@@ -1,0 +1,134 @@
+:root {
+    --ink: #14213d;
+    --bg: #eef2f6;
+    --accent: #0f9d8a;
+    --accent-dark: #0b7c6d;
+    --signal: #ffb703;
+    --line: #d5dde6;
+}
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Figtree', system-ui, sans-serif;
+}
+.brand, .headline {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    letter-spacing: -0.02em;
+}
+.brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--ink);
+}
+.headline {
+    font-weight: 800;
+    line-height: 1.05;
+}
+.nav-pills .nav-link {
+    color: var(--ink);
+    font-weight: 600;
+}
+.nav-pills .nav-link.active {
+    background: var(--ink);
+    color: #fff;
+}
+.panel {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+}
+.form-label {
+    font-weight: 600;
+    font-size: .9rem;
+}
+.form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 .2rem rgba(15,157,138,.2);
+}
+.btn-accent {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    padding: .7rem 1.2rem;
+    border: 0;
+}
+.btn-accent:hover, .btn-accent:focus-visible {
+    background: var(--accent-dark);
+    color: #fff;
+}
+.empty {
+    border: 2px dashed var(--line);
+    border-radius: 14px;
+    padding: 2.5rem;
+    color: #5b6b80;
+}
+.job {
+    display: flex;
+    gap: 1.1rem;
+    align-items: center;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: .9rem;
+}
+.ring {
+    --p: 0;
+    flex: none;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: conic-gradient(var(--accent) calc(var(--p) * 1%), var(--line) 0);
+    display: grid;
+    place-items: center;
+    transition: background .6s;
+}
+.ring.mid {
+    background: conic-gradient(var(--signal) calc(var(--p) * 1%), var(--line) 0);
+}
+.ring span {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.15rem;
+}
+.job h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+.meta {
+    color: #5b6b80;
+    font-size: .88rem;
+    margin-bottom: .5rem;
+}
+.chip {
+    display: inline-block;
+    font-size: .78rem;
+    padding: .15rem .55rem;
+    border-radius: 6px;
+    margin: 0 .3rem .3rem 0;
+}
+.chip.have {
+    background: #d8f3ee;
+    color: #08645a;
+    font-weight: 600;
+}
+.chip.need {
+    background: #fff;
+    border: 1px dashed #98a6b8;
+    color: #5b6b80;
+}
+@media (prefers-reduced-motion: reduce) {
+    .ring {
+        transition: none;
+    }
+}
+@media (max-width: 575px) {
+    .job {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
